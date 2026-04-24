@@ -21,7 +21,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Main {
             // ---------------------------//
             // | Q    | W     | ENCODER | //
             // | A    | S     | D       | //
@@ -29,28 +29,12 @@
 
             display-name = "default";
             bindings = <
-&kp TAB       &kp W           &to 1
+&kp TAB       &kp W           &to 2
 &kp A         &kp S           &kp D
 &kp UP_ARROW  &kp DOWN_ARROW  &kp SPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        function_layer {
-            // --------------------------- //
-            // | BT_CLR | none | ENCODER | //
-            // | BT_0   | BT_1 | BT_2    | //
-            // | BT_3   | BT_4 | trans   | //
-
-            display-name = "function";
-            bindings = <
-&bt BT_CLR    &none         &to 2
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
-&bt BT_SEL 3  &bt BT_SEL 4  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
@@ -59,6 +43,22 @@
 &kp INS      &kp HOME         &kp LC(C)
 &kp DELETE   &kp END          &kp LC(V)
             >;
+        };
+
+        Config {
+            // --------------------------- //
+            // | BT_CLR | none | ENCODER | //
+            // | BT_0   | BT_1 | BT_2    | //
+            // | BT_3   | BT_4 | trans   | //
+
+            display-name = "function";
+            bindings = <
+&bt BT_CLR    &none         &to 1
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+&bt BT_SEL 3  &bt BT_SEL 4  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
