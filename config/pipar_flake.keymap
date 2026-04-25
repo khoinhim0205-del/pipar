@@ -29,7 +29,8 @@
 &kp UP_ARROW  &kp DOWN_ARROW  &kp SPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            label = "Geometry Dash";
         };
 
         Main {
@@ -45,7 +46,7 @@
 &kp UP_ARROW  &kp DOWN_ARROW  &kp SPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         V2 {
@@ -55,7 +56,8 @@
 &kp DELETE   &kp END          &kp LC(V)
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            label = "Shortcut";
         };
 
         Config {
@@ -64,14 +66,14 @@
             // | BT_0   | BT_1 | BT_2    | //
             // | BT_3   | BT_4 | trans   | //
 
-            display-name = "function";
+            display-name = ">ᛒ";
             bindings = <
 &bt BT_CLR    &key_repeat   &to 0
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
 &bt BT_SEL 3  &bt BT_SEL 4  &bl BL_ON
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
     };
 };
